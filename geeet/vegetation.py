@@ -453,11 +453,11 @@ def compute_fwet(RH, band_name=None):
     Fisher et al., 2008
     '''
     if is_img(RH):
-        Fwet = (RH.divide(100.0)).pow(4)
+        Fwet = (RH.divide(100)).pow(4)
         if band_name:
             Fwet = Fwet.rename(band_name)
     else:
-        Fwet = (RH/100.0) ** 4
+        Fwet = (RH/100) ** 4
     return Fwet
 
 
